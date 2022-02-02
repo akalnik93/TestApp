@@ -57,7 +57,7 @@ class ViewController: UIViewController {
     
     var buttonForCreate: UIButton = {
         let button = UIButton()
-        button.layer.backgroundColor = UIColor(red: 0.353, green: 0.204, blue: 0.447, alpha: 1).cgColor
+        button.setBackgroundColor(color: UIColor(red: 0.353, green: 0.204, blue: 0.447, alpha: 1), forState: .normal)
         button.layer.cornerRadius = 4
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(createElement), for: .touchUpInside)
