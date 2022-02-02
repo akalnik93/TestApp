@@ -9,11 +9,11 @@ class CustomCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = .clear
-        setConstraintsCellContainer()
-        setConstraintsCellPicture()
-        setConstraintsCellTitle()
-        setConstraintsCellContent()
-        setConstraintsCellSubPicture()
+        self.setConstraintsCellContainer()
+        self.setConstraintsCellPicture()
+        self.setConstraintsCellTitle()
+        self.setConstraintsCellContent()
+        self.setConstraintsCellSubPicture()
     }
     
     var cellTitle: UILabel = {

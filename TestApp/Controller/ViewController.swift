@@ -10,9 +10,9 @@ class ViewController: UIViewController {
         self.tableView.register(CustomCell.self, forCellReuseIdentifier: idCustomCell)
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        constraintsForButtonForCreate()
-        constraintsForTable()
-        constraintsForButtonLabelForCreate()
+        self.constraintsForButtonForCreate()
+        self.constraintsForTable()
+        self.constraintsForButtonLabelForCreate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -95,7 +95,8 @@ class ViewController: UIViewController {
             case .live:
                 self.elementsArray.append(Element(condition: .liveMessage))
             case .dead:
-                self.elementsArray.append(Element(condition: .deadMessage))
+                if let i = self.elementsArray.lastIndex(of: Element(condition: .liveMessage)) { self.elementsArray.remove(at: i)
+                } else { return }
             default:
                 print("Произошла непредвиденная ошибка, свяжитесь с командой разработки")
             }

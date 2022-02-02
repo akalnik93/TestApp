@@ -7,11 +7,10 @@ enum ElementCondition {
     case dead
     
     case liveMessage
-    case deadMessage
 
 }
 
-struct Element {
+struct Element : Equatable {
     
     var condition: ElementCondition
     var title: String
@@ -41,12 +40,6 @@ struct Element {
             self.comment = "Ку-ку"
             self.picture = UIImage(named: "liveMessage fond")
             self.subPicture = UIImage(named: "liveMessage")
-        
-        case .deadMessage:
-            self.title = "Смерть"
-            self.comment = "Бай-бай"
-            self.picture = UIImage(named: "deadMessage fond")
-            self.subPicture = UIImage(named: "deadMessage")
         }
     }
 
